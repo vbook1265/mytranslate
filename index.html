@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Translate</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>My Translate</h1>
+    <div class="subtitle">By BX Company</div>
+    <div class="controls">
+      <select id="fromLang">
+        <option value="en">English</option>
+        <option value="id">Indonesian</option>
+        <option value="ko">Korean</option>
+        <option value="ja">Japanese</option>
+      </select>
+      <span>→</span>
+      <select id="toLang">
+        <option value="id">Indonesian</option>
+        <option value="en">English</option>
+        <option value="ko">Korean</option>
+        <option value="ja">Japanese</option>
+      </select>
+    </div>
+    <div class="translate-boxes">
+      <div class="box">
+        <textarea id="inputText" placeholder="Enter text..."></textarea>
+      </div>
+      <div class="box">
+        <textarea id="outputText" readonly placeholder="Translation will appear here..."></textarea>
+      </div>
+    </div>
+    <button onclick="translateText()">Translate</button>
+    <div class="footer">My Translate. By BX Company</div>
+  </div>
+
+  <button class="feedback-button" onclick="toggleFeedback()"></button>
+  <div class="feedback-options" id="feedbackOptions">
+    <button onclick="openEmail()">Kirim via Email</button>
+    <button onclick="openWhatsApp()">Kirim via WhatsApp</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    function toggleFeedback() {
+      const box = document.getElementById("feedbackOptions");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+
+    function openEmail() {
+      const pesan = prompt("Masukkan pesan Anda:");
+      if (pesan) {
+        const mailtoLink = `mailto:drivekanaja12@gmail.com?subject=Kritik%20dan%20Saran&body=${encodeURIComponent(pesan)}`;
+        window.location.href = mailtoLink;
+      }
+    }
+
+    function openWhatsApp() {
+      const pesan = prompt("Masukkan pesan Anda:");
+      if (pesan) {
+        const whatsappLink = `https://wa.me/6283122334455?text=${encodeURIComponent(pesan)}`;
+        window.open(whatsappLink, '_blank');
+      }
+    }
+  </script>
+</body>
+</html>

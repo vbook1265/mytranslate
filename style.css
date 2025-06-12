@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+h1 {
+  text-align: center;
+  color: #000;
+  margin-bottom: 5px;
+}
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.translate-boxes {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.box {
+  flex: 1 1 45%;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 25px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #333;
+}
+.feedback-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABPklEQVR4nO3XwQ3CMAwE0PXp/39JFAiT4pBpXTIfJrbnPVHF+UJUgAAEAgQIAABAgQIECAAAECBAj8Dt9O3MeO4k7KknvBu7qV4s1WVwZB6gT0PAa0S3J6Pa9a4AuqdEAbQDwOwA6A9A+AXQDwOwA6A9A+AXQDwOwA6A9A+AXQDwOwA6E+QC3vPmqFd/CG9AeBfQHgX0B4F9AeBfQHgX0B4F9AeBfQHgX0B4F9AfhXcJeTGluHSG9NAAAAAElFTkSuQmCC');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.feedback-options {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.feedback-options button {
+  margin: 5px 0;
+  width: 100%;
+}
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 30px;
+}
